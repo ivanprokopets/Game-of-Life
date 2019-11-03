@@ -12,8 +12,7 @@ W automatach komórkowych przyjęło się, że różne stany przedstawia się za
 
 - sąsiedztwo Moore'a: 8 przylegających komórek (znajdujących się: na południu, na południowym-zachodzie, na zachodzie, na północnym-zachodzie, na północy, na północnym-wschodzie, na wschodzie i na południowym-wschodzie).
 - sąsiedztwo von Neumanna: 4 przylegające komórki (na południu, zachodzie, północy i wschodzie).
-! [] (Gospers_glider_gun-giphy.gif)
-
+![](Gospers_glider_gun.gif)  
 Powyżej przedstawione zostały w działaniu automat komórkowy. Po lewej -- Gra w życie (Life) Johna Conwaya. Jak widać, w Grze w życie komórka może być w jednym z dwóch stanów (czarny/biały).
 
 Program umożliwia:
