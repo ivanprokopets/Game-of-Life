@@ -1,0 +1,112 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel} 
+\usepackage[utf8]{inputenc} 
+\usepackage{indentfirst}
+\let\lll\undefined
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy} 
+\newcommand{\mainmatter}{\clearpage \cfoot{\thepage\ of \pageref{LastPage}}
+\pagenumbering{arabic}}
+
+\begin{document}
+	\begin{titlepage}
+		
+		\begin{center}
+
+    	\vspace{5cm}
+    		\Large\textit{\textbf{SPECYFIKACJA FUNKCJONALNA 
+    		\\''Gra w życie'' DLA JĘZYKA PROGROMOWANIA C}}\\ 
+		\vspace{15cm}
+		\end{center} 
+
+		\hfill\begin{minipage}{0.5\textwidth}
+			\Large Wykonali:\newline
+				1. Ivan Prakapets \newline
+		\vspace{\baselineskip}
+		\end{minipage}
+	\end{titlepage}
+\newpage
+\mainmatter
+\setlength{\headheight}{15pt}
+\doublespacing
+\tableofcontents
+\newpage
+
+	\section{Opis Ogólny}
+		\subsection{Nazwa programu} 
+			\textbf{Nazwa programu:} \texttt{gra$\_$w$\_$zycie.}
+			
+		\subsection{Poruszany problem}
+			\hspace*{1cm} Zbudowanie programu automatu komórkowego w języku C. Będzie on przedstawiał działanie automatu na podstawie zasad Gry w życie z angielskiego ''Game of life'' autorstwa Johna Conwaya.\newline
+			\hspace*{1cm} Gra w życie składa się z komórek martwych i żywych. Stan wszystkich komórek nazywamy genereacją. Komórki mogą zmieniać swój stan w zależności od sąsiedztwa, dokładnie od liczby żywych sąsiadów i obecnego stanu.
+			\hspace*{1cm} Zestaw zasad przy tworzeniu nowej generacji  jest następujący:
+
+		\begin{itemize}
+			\item martwa komórka, która ma dokładnie 3 żywych sąsiadów, staje się żywa w następnej jednostce czasu (rodzi się),
+			\item żywa komórka z 2 albo 3 żywymi sąsiadami pozostaje nadal żywa; przy innej liczbie sąsiadów umiera (z ''samotności'' albo ''zatłoczenia'').
+		\end{itemize}
+		
+			\hspace*{1cm} Są dwa rodzaje sąsiedztw Moore'a i von Neumanna. W sąsiedztwie Moore'a mamy 8 przylegających komórek (znajdujących się: na południu, na południowym-zachodzie, na zachodzie, na północnym-zachodzie, na północy, na północnym-wschodzie, na wschodzie i na południowym-wschodzie) oraz w sąsiedztwie von Neumanna 4 przylegających komórek (na południu, zachodzie, północy i wschodzie).
+\newpage
+	\section{Opis funkcjonalności}
+		\subsection{Możliwości programu}
+			\hspace*{1cm} Program będzie zawierał następujące możliwości:
+		
+ 		\begin{enumerate}
+ 			\item Wczytywanie danych wejściowych zadanych jako argumenty.
+ 			\item Wczytywanie pierwszej generacji z pliku tekstowego, składającego się z~zer i jedynek, gdzie zero oznacza komórkę martwą, a jedynka komórkę żywą.
+ 			\item Wczytywanie pierwszej generacji z pliku graficznego, gdzie piksel czarny oznacza komórkę żywą, a piksel biały oznacza komórkę martwą.
+ 			\item Użytkownik ma możliwość wyboru algorytmu rozwiązania (Moore'a lub von Neumanna).
+ 			\item Użytkownik ma możliwość wyboru ilości symulacji kolejnych generacji komórek.
+  			\item Zapisanie stanów do plików graficznych PNG oraz tworzenie pliku GIF przedstawijącego zmiany w kolejnych generacjach.
+ 			\item Sprawdzanie poprawności pliku wejściowego i podanych argumentów.
+ 			\item Obsługa różnych błędnych danych.
+ 		\end{enumerate}
+ 		
+ 		\subsection{Jak korzystać z programu?}
+ 			\hspace*{1cm} Program nie ma interfejsu graficznego. Z tego powodu skompilowany program musi być uruchomiony z konsoli. Wszystkie ustawienia programu podawane są jako kolejne argumenty.\newline
+ 			\hspace*{1cm} Lista argumentów do wywołania programu:
+ 		
+ 		 	\begin{enumerate}
+ 			\item Ścieżka do pliku z danymi opisującymi pierwszą generację. Program wczytuje formaty: \texttt{*.txt, *.png.}
+ 			\item Liczbę symulowanych generacji.
+ 			\item Początek nazwy plików wyjściowych.
+ 			\item Tryb uruchomienia (\texttt{-m} - Moore'a, \texttt{-n} - von Neumanna).
+ 			\end{enumerate}
+ 			
+ 		\subsection{Uruchomienie programu}
+			\hspace*{1cm}\textbf{Przykład wywołania programu:}
+			\newline \texttt{./gra$\_$w$\_$zycie obrazek.png out 100 -m}
+\newpage
+	\section{Format danych i struktura katalogów} 
+		\subsection{Struktura katalogów}
+			\hspace*{1cm} Gra w życie będzie zawierała kilka katalogów, w katalogie głównym będzie plik wywołania programu. Podkatalog \texttt{''gra$\_$w$\_$zycie''} będzie zawierał pliki źródłowe i nagłówkowe. Podkatalog \texttt{''dane''} będzie zawierał pliki \texttt{*.txt} oraz \texttt{*.png}. Podkatalog \texttt{''wynik''} będzie zawierał obrazy w formacie PNG i GIF oraz pliki tekstowe z wybraną generacją.
+		
+		\subsection{Dane wejściowe}
+			\hspace*{1cm} Program Gra w życie otrzymuje dane wejściowe. Najpierw plik tekstowy \texttt{*.txt} lub plik graficzny \texttt{*.png}. Plik tekstowy składa się z zer i~jedynek, gdzie zero oznacza komórkę martwą, a jedynka komórkę żywą. Plik graficzny składa się z pikseli, gdzie piksel biały oznacza komórkę martwą, a~piskel czarny oznacza komórkę żywą.
+		
+		\subsection{Dane wyjściowe}
+			\hspace*{1cm} W wyniku wywołania programu, pierwsza generacja zostanie wczytana z pliku \texttt{*.png} lub \texttt{*.txt}. Zostaną wygenerowane pliki w formacie PNG zawieracjące generacje symulacji, o nazwach, \texttt{out$\_$[nr-generacji].png} oraz plik GIF o nazwie \texttt{out.gif}.
+\newpage
+	\section{Obsługa sytuacji błędnych}
+		\hspace{1cm} Program będzie obsługiwał błędne dane z odpowiednimi komunikatami:
+		\renewcommand{\labelitemi}{$\ast$}
+		
+		\begin{itemize}
+			\item \textit{Nieprawidłowa liczba argumentów.}
+ 			\item \textit{Niepoprawny argument.}
+ 			\item \textit{Plik wejściowy nie istnieje.}
+ 			\item \textit{Plik wejściowy zawiera niepoprawne dane.}
+ 			\item \textit{Tryb nie został wybrany.}
+		\end{itemize}
+\newpage
+	\section{Testowanie}
+		\hspace{1cm} Do przetestowania kodu będę używał kompilator ISO C99 z poleceniem \texttt{-Wall}, a także będę używał takiego programu jak \texttt{''Valgrind''} dla sprawdzania wycieków pamięci. Dla stworzenia plików wejściowych PNG będę używał programu \texttt{''GNU Image Manipulation Program''}.
+\label{LastPage}~
+\label{LastPageOfBackMatter}~		
+\end{document}
