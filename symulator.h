@@ -13,5 +13,4 @@ void symulator_Neumann(int, int**, char*);
 void symulator_Moore_a_txt(int, int**, char*);
 void symulator_Neumann_txt(int, int**, char*);
 void usage();
-
 #endif

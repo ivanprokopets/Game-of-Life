@@ -1,6 +1,4 @@
-
 #include "symulator.h"
-
 void symulator_Moore_a(int num_of_symulations, int * * matrix, char * output) {
 
     process_file(matrix);
