@@ -1,6 +1,4 @@
-
 #include "generacja.h"
-
 void print_gen_to_file(int * * matrix, int nr) {
     color_type = PNG_COLOR_TYPE_GRAY;
 
