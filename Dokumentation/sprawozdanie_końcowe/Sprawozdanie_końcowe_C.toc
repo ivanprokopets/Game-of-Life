@@ -1,0 +1,18 @@
+\select@language {polish}
+\contentsline {section}{\numberline {1}Wprowadzone zmiany}{2}
+\contentsline {subsection}{\numberline {1.1}Modu\IeC {\l } read$\_$and$\_$write$\_$png}{2}
+\contentsline {subsection}{\numberline {1.2}Modu\IeC {\l } read$\_$txt}{2}
+\contentsline {subsection}{\numberline {1.3}Modu\IeC {\l } generacja}{3}
+\contentsline {subsection}{\numberline {1.4}Modu\IeC {\l } sasiadstwa}{3}
+\contentsline {section}{\numberline {2}Dodanie modu\IeC {\l }\IeC {\'o}w}{4}
+\contentsline {subsection}{\numberline {2.1}Modu\IeC {\l } regula$\_$generacji}{4}
+\contentsline {subsection}{\numberline {2.2}Modu\IeC {\l } symulator}{4}
+\contentsline {subsection}{\numberline {2.3}Modu\IeC {\l } test$\_$game}{5}
+\contentsline {section}{\numberline {3}Dzia\IeC {\l }ania i wyniki programu}{6}
+\contentsline {subsection}{\numberline {3.1}Kompilacja i uruchomienie}{6}
+\contentsline {subsubsection}{\numberline {3.1.1}Kompilacja}{6}
+\contentsline {subsubsection}{\numberline {3.1.2}Uruchomienie}{6}
+\contentsline {subsection}{\numberline {3.2}Wyniki programu}{7}
+\contentsline {subsubsection}{\numberline {3.2.1}Dzia\IeC {\l }ania programu dla plik\IeC {\'o}w \texttt {.png}}{7}
+\contentsline {subsubsection}{\numberline {3.2.2}Dzia\IeC {\l }ania programu dla plik\IeC {\'o}w \texttt {.txt}}{9}
+\contentsline {section}{\numberline {4}Wnioski}{11}
